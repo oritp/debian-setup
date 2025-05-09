@@ -6,6 +6,12 @@ echo "============================================================"
 
 # Confirm installation
 echo -e "\nThis script is going to install Spotify on your system."
+read -p "Are you ready to proceed? (y/n) " answer
+
+if [[ "$answer" != "y" && "$answer" != "Y" ]]; then
+    echo -e "The installation has been stopped. Bye! \n"
+    exit 0
+fi
 
 echo -e "\nStarting the Spotify installation...\n"
 
