@@ -5,15 +5,15 @@ echo "     Visual Studio Code installation     "
 echo "========================================="
 
 # Confirm installation
-echo -e "\nThis script is going to install Visual Studio Code in your system."
-read -p "Are you ready to proceed? (y/n) " answer
+echo -e "\n[+] This script is going to install Visual Studio Code in your system."
+read -p "[+] Are you ready to proceed? (y/n) " answer
 
 if [[ "$answer" != "y" && "$answer" != "Y" ]]; then
-    echo -e "The installation has been stopped. Bye! \n"
+    echo -e "[!] The installation has been stopped. Bye! \n"
     exit 0
 fi
 
-echo -e "\nStarting the Visual Studio Code installation...\n"
+echo -e "\n[+] Starting the Visual Studio Code installation...\n"
 
 # Install requierements
 sudo apt-get update
@@ -33,4 +33,4 @@ rm -f packages.microsoft.gpg
 sudo apt update
 sudo apt install -y code
 
-echo -e "\nVisual Studio Code installed successfully! \n"
+echo -e "\n[+] Visual Studio Code installed successfully! \n"
