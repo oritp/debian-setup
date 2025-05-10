@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo "========================================="
-echo "     Visual Studio Code installation     "
-echo "========================================="
+echo "==========================================================="
+echo "              Visual Studio Code installation              "
+echo "==========================================================="
 
 # Confirm installation
 echo -e "\n[+] This script is going to install Visual Studio Code in your system."
@@ -16,8 +16,8 @@ fi
 echo -e "\n[+] Starting the Visual Studio Code installation...\n"
 
 # Install requierements
-sudo apt-get update
-sudo apt-get install -y wget gpg apt-transport-https
+sudo apt update
+sudo apt install -y wget gpg apt-transport-https
 
 # Download and store the Microsoft GPG key
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | \
