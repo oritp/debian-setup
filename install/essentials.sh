@@ -137,4 +137,4 @@ sudo apt update
 sudo apt autoremove -y
 sudo apt clean
 
-print "\nAll done! Reboot your system to apply all the changes.\n"
+print "\nAll done! Reboot your system to apply all the changes.\n Enjoy! :)\n"
