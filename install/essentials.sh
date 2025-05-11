@@ -20,7 +20,7 @@ if [[ "$answer" != "y" && "$answer" != "Y" ]]; then
     exit 0
 fi
 
-print -e "\n[+] Starting Debian 12 essential configuration...\n"
+print "\n[+] Starting Debian 12 essential configuration...\n"
 
 # ----------------------------------------------------------------
 # 1. Update system and enable backports
