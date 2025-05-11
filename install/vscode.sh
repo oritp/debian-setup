@@ -8,7 +8,7 @@ print() { echo -e "${CYAN}$1${AUTO}"; }
 error() { echo -e "${RED}$1${AUTO}"; }
 
 print "==========================================================="
-print "              Visual Studio Code installation              "
+print "              Visual Studio Code Installation              "
 print "==========================================================="
 
 # Confirm installation

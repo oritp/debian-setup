@@ -8,7 +8,7 @@ print() { echo -e "${CYAN}$1${AUTO}"; }
 error() { echo -e "${RED}$1${AUTO}"; }
 
 print "============================================================"
-print "                    Spotify installation                    "
+print "                    Spotify Installation                    "
 print "============================================================"
 
 # Confirm installation
@@ -33,6 +33,6 @@ echo "deb [signed-by=/usr/share/keyrings/spotify-archive-keyring.gpg] https://re
 
 # Install Spotify
 sudo apt update
-sudo apt install spotify-client
+sudo apt install -y spotify-client
 
 print "\n[+] Spotify installed successfully! \n"
