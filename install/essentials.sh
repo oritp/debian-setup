@@ -12,7 +12,7 @@ print "             Debian 12 Essential Configuration             "
 print "==========================================================="
 
 # Confirm installation
-print -e "\n[+] This script is going to run several processes in your system."
+print "\n[+] This script is going to run several processes in your system."
 read -p "$(print "[+] Are you ready to proceed? (y/n) ")" answer
 
 if [[ "$answer" != "y" && "$answer" != "Y" ]]; then
@@ -137,4 +137,4 @@ sudo apt update
 sudo apt autoremove -y
 sudo apt clean
 
-print "\nAll done! Reboot your system to apply all the changes. \nEnjoy! :)\n"
+print "\nAll done! Reboot your system to apply all the changes.\n"
