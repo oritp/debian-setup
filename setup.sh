@@ -1,14 +1,9 @@
 #!/bin/bash
 
-RED='\e[0;31m'
-CYAN='\e[0;36m'
-AUTO='\e[0m'
-
-print() { echo -e "${CYAN}$1${AUTO}"; }
-error() { echo -e "${RED}$1${AUTO}"; }
+source "./utils/colors.sh"
 
 print "============================================================"
-print "                     Debian 12 Setup Menu                   "
+print "                    DEBIAN 12 SETUP MENU                    "
 print "============================================================"
 
 print "\n[+] Welcome to Debian 12 Setup Menu!"
@@ -20,6 +15,7 @@ print "    4. VS Code"
 print "    5. Spotify"
 
 read -p "$(print "[+] Choose an option [1-5]: ")" option
+print ""
 
 case $option in
     1) bash install/essentials.sh
