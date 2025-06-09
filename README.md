@@ -1,4 +1,4 @@
-![Shell Script](https://img.shields.io/badge/language-Bash-orange?logo=gnubash)
+![Shell Script](https://img.shields.io/badge/language-Shell-orange?logo=gnubash)
 ![Debian 12](https://img.shields.io/badge/platform-Debian-blue?logo=debian)
 ![Last Commit](https://img.shields.io/github/last-commit/oritp/debian-setup)
 
