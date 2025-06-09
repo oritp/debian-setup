@@ -1,5 +1,6 @@
 ![Debian 12](https://img.shields.io/badge/Platform-Debian%2012-blue?logo=debian)
 ![Shell](https://img.shields.io/badge/Language-Shell-orange?logo=gnubash)
+![License](https://img.shields.io/badge/License-MIT%20License-lightgrey)
 ![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 
 # Debian 12 GNU/Linux Setup
@@ -13,7 +14,7 @@ This is the repository structure:
 
 Before running the main script, it is recommended to manually complete the following steps:
 
-1. **Hide password input feedback**
+#### 1. Hide password input feedback
 
 Access the _sudoers_ file located in the _etc_ system folder:
 
@@ -24,7 +25,7 @@ Modify the following line:
 
     Defaults pwfeedback
 
-2. **Add superuser privileges**
+#### 2. Add superuser privileges
 
 If our user (we'll call it _user_) does not come with predefined admin or superuser privileges, we can fix it by editing:
 
@@ -38,20 +39,20 @@ Finally, update the system:
 
     sudo apt update && sudo apt dist-upgrade -y
 
-3. **Install graphics drivers**
+#### 3. Install graphics drivers
 
 Identify your system's graphics card:
 
     lspci | grep -i 'vga\|3d'
 
-- **AMD / INTEL**
+##### 3.1. AMD / INTEL
 
 Generally, AMD and INTEL drivers are supported by the Debian kernel, but we ensure their installation anyway:
 
     sudo apt install -y firmware-amd-graphics mesa-vulkan-drivers mesa-va-drivers vainfo
     sudo apt install -y intel-media-va-driver firmware-misc-nonfree mesa-va-drivers vainfo
 
-- **NVIDIA**
+##### 3.2. NVIDIA
 
 First, install the NVIDIA detection tool and run it:
 
@@ -76,16 +77,16 @@ Reboot the system and verify the installation:
 
 Proceed to install the Debian 12 GNU/Linux setup program.
 
-1. **Clone the repository**
+#### 1. Clone the repository
 
     git clone https://github.com/oritp/debian-setup.git
     cd debian-setup
 
-2. **Grant execution permissions**
+#### 2. Grant execution permissions
 
     chmod +x setup.sh
 
-3. **Run the main script**
+#### 3. Run the main script
 
     ./setup.sh
 
@@ -94,17 +95,12 @@ Proceed to install the Debian 12 GNU/Linux setup program.
 
 When executing the script, an interactive menu will appear with the following options:
 
-1. Install everything
-
-2. Install only essential configuration
-
-3. Install only terminal configuration
-   
-4. Install only appearence configuration
-
-5. Install only VS Code
-
-6. Install only Spotify
+- Install everything
+-  Install only essential configuration
+-  Install only terminal configuration
+-  Install only appearence configuration
+-  Install only VS Code
+-  Install only Spotify
 
 
 ## 📊 Details of essentials.sh
@@ -113,39 +109,39 @@ This script automates the installation of a base setup ideal for desktop and dev
 
 Here are the processes included in the essential setup:
 
-1. **System update and enabling backports**
+- **System update and enabling backports**
 
 Improves compatibility and updates the system to the latest available version.
 
-2. **Installation of essential tools**
+- **Installation of essential tools**
 
 Installs CLI utilities for networking, editors (vim), monitoring (htop, btop), download tools (curl, wget), certificates, and more.
 
-3. **Package managers and decompression tools**
+- **Package managers and decompression tools**
 
 Installs drivers for file systems and compression formats (exFAT, NTFS, zip, rar, 7z), as well as package managers (Synaptic, Gdebi, Flatpak).
 
-4. **Installation of CPU microcodes**
+- **Installation of CPU microcodes**
 
 Analyzes the CPU and installs the appropriate microcodes for Intel or AMD based on the detected processor.
 
-5. **Development and network tools**
+- **Development and network tools**
 
 Installs useful tools for development and network management (build-essential, gcc, clang, python3, net-tools, traceroute, nmap, etc.).
 
-6. **Multimedia support and codecs**
+- **Multimedia support and codecs**
 
 Installs major codec packages for multimedia support (ffmpeg, GStreamer, etc.).
 
-7. **Fonts, printers, firewall and VPN**
+- **Fonts, printers, firewall and VPN**
 
 Installs useful fonts like Microsoft and Ubuntu fonts, as well as printer drivers, a firewall (Gufw), and a VPN (Riseup VPN).
 
-8. **GNOME customization**
+- **GNOME customization**
 
 Installs tools to personalize the GNOME environment (gnome-tweaks, extensions, dconf-editor).
 
-9. **Final system cleanup**
+- **Final system cleanup**
 
 At the end, the script frees up space and recommends a system reboot to apply all changes properly.
 
