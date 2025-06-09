@@ -1,10 +1,8 @@
-![Shell Script](https://img.shields.io/badge/language-Shell-orange?logo=gnubash)
-![Debian 12](https://img.shields.io/badge/platform-Debian-blue?logo=debian)
-![Last Commit](https://img.shields.io/github/last-commit/oritp/debian-setup)
+![Debian 12](https://img.shields.io/badge/Platform-Debian%2012-blue?logo=debian)
+![Shell](https://img.shields.io/badge/Language-Shell-orange?logo=gnubash)
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 
 # Debian 12 GNU/Linux Setup
-
-# Debian Setup
 
 This repository contains a set of shell scripts designed to simplify the initial setup of systems based on Debian 12 GNU/Linux. It provides a quick and customizable installation of essential tools, development environments, system settings, appearance, and popular applications.
 
