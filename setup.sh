@@ -13,7 +13,7 @@ print "[+] What do you want to install?"
 print "    1. Everything"
 print "    2. Essential configuration"
 print "    3. Terminal configuration"
-print "    4. Appearence configuration"
+print "    4. Appearance configuration"
 print "    5. VS Code"
 print "    6. Spotify"
 
@@ -23,7 +23,7 @@ print ""
 case $option in
     1) bash install/essentials.sh
        bash install/terminal.sh
-       bash install/appearence.sh
+       bash install/appearance.sh
        bash install/vscode.sh
        bash install/spotify.sh ;;
     2) bash install/essentials.sh ;;
