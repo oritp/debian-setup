@@ -153,7 +153,19 @@ In progress...
 
 ## 🎨 Details of appearance.sh
 
-In progress...
+This script installs and enables the GNOME Arc theme and Newaita icons.
+
+It also installs some GNOME extensions for a more modern look.
+
+Changes are attempted to be applied through _gsettings_, and if this isn't possible, you'll need to do it manually using the GNOME Tweaks GUI.
+
+It's also recommended to enable the minimize and maximize buttons in the top bar of application windows. To do this, launch GNOME Tweaks and enable the "Minimize" and "Maximize" options in the Top Bar section.
+
+The extensions are as follows:
+
+- Dash to dock
+- Pannel corners
+- ...
 
 
 ## 🎵 Details of vscode.sh and spotify.sh
