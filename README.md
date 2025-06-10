@@ -98,7 +98,7 @@ When executing the script, an interactive menu will appear with the following op
 - Install everything
 -  Install only essential configuration
 -  Install only terminal configuration
--  Install only appearence configuration
+-  Install only appearance configuration
 -  Install only VS Code
 -  Install only Spotify
 
