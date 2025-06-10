@@ -2,29 +2,35 @@
 
 source "./utils/colors.sh"
 
-print "============================================================"
-print "                    DEBIAN 12 SETUP MENU                    "
-print "============================================================"
+print "############################################################"
+print "#                                                          #"
+print "#                Debian 12 GNU/Linux Setup                 #"
+print "#                                                          #"
+print "############################################################"
 
 print "\n[+] Welcome to Debian 12 Setup Menu!"
 print "[+] What do you want to install?"
 print "    1. Everything"
 print "    2. Essential configuration"
 print "    3. Terminal configuration"
-print "    4. VS Code"
-print "    5. Spotify"
+print "    4. Appearence configuration"
+print "    5. VS Code"
+print "    6. Spotify"
 
 read -p "$(print "[+] Choose an option [1-5]: ")" option
 print ""
 
 case $option in
     1) bash install/essentials.sh
+       bash install/terminal.sh
+       bash install/appearence.sh
        bash install/vscode.sh
        bash install/spotify.sh ;;
-    2) bash terminal/config.sh ;;
-    3) bash install/essentials.sh ;;
-    4) bash install/vscode.sh ;;
-    5) bash install/spotify.sh ;;
+    2) bash install/essentials.sh ;;
+    3) bash install/terminal.sh ;;
+    4) bash install/appearance.sh ;;
+    5) bash install/vscode.sh ;;
+    6) bash install/spotify.sh ;;
     *) error "[!] Invalid option. Bye! \n"
        exit 0 ;;
 esac
