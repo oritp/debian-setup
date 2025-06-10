@@ -8,6 +8,13 @@ print "#                Debian 12 GNU/Linux Setup                 #"
 print "#                                                          #"
 print "############################################################"
 
+# Enabling execution permissions
+chmod +x essentials.sh
+chmod +x terminal.sh
+chmod +x appearance.sh
+chmod +x vscode.sh
+chmod +x spotify.sh
+
 print "\n[+] Welcome to Debian 12 Setup Menu!"
 print "[+] What do you want to install?"
 print "    1. Everything"
