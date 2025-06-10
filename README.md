@@ -21,7 +21,7 @@ Access the _sudoers_ file located in the _etc_ system folder:
     su
     nano /etc/sudoers
 
-Modify the following line:
+Add the following line:
 
     Defaults pwfeedback
 
@@ -29,7 +29,7 @@ Modify the following line:
 
 If our user (we'll call it _user_) does not come with predefined admin or superuser privileges, we can fix it by editing:
 
-    nano /etc/sudoers.d/user
+    nano /etc/sudoers
 
 Scroll down to where users and permissions are listed, and add our user:
 
@@ -45,9 +45,9 @@ Identify your system's graphics card:
 
     lspci | grep -i 'vga\|3d'
 
-##### 3.1. AMD / INTEL
+##### 3.1. AMD / Intel
 
-Generally, AMD and INTEL drivers are supported by the Debian kernel, but we ensure their installation anyway:
+Generally, AMD and Intel drivers are supported by the Debian kernel, but we ensure their installation anyway:
 
     sudo apt install -y firmware-amd-graphics mesa-vulkan-drivers mesa-va-drivers vainfo
     sudo apt install -y intel-media-va-driver firmware-misc-nonfree mesa-va-drivers vainfo
