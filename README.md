@@ -135,7 +135,7 @@ Installs major codec packages for multimedia support (ffmpeg, gstreamer, libavco
 
 - **Fonts, printers, firewall, VPN and useful programs**
 
-Installs text fonts (Microsoft, Ubuntu, free fonts), as well as printer drivers, a firewall (Gufw), a VPN (Riseup VPN), and finally useful programs (Kitty, Firefox, Chromium, GIMP, VLC, Wireshark).
+Installs text fonts (Microsoft, Ubuntu, free fonts), as well as printer drivers, a firewall (Gufw), a VPN (Riseup VPN), and finally useful programs (Kitty, Firefox, Chromium, GIMP, VLC, Audacity, Wireshark).
 
 - **GNOME customization**
 
