@@ -36,9 +36,9 @@ sudo apt install -y -t bookworm-backports linux-image-amd64
 # ----------------------------------------------------------------
 print "\n[+] Installing essential tools and CLI utilities..."
 sudo apt install -y \
-  sudo curl wget git vim gpg \
+  sudo curl wget git vim nano \
   neofetch htop btop inxi \
-  gnupg lsb-release ca-certificates \
+  gpg gnupg lsb-release ca-certificates \
   software-properties-common
   
 # ----------------------------------------------------------------
