@@ -16,7 +16,7 @@ Before running the main script, it is recommended to manually complete the follo
 
 #### 1. Hide password input feedback
 
-Access the _sudoers_ file located in the _etc_ system folder:
+Access the `sudoers` file located in the `etc` system folder:
 
     su
     nano /etc/sudoers
@@ -148,8 +148,9 @@ At the end, the script frees up space and recommends a system reboot to apply al
 
 ## 🖥️ Details of terminal.sh
 
-In progress...
+This script configures the GNOME terminal emulator to create a more modern and attractive terminal, always running in bash.
 
+For those who prefer to use Kitty, it can also be configured using the `kitty.conf` file located in the same directory.
 
 ## 🎨 Details of appearance.sh
 
