@@ -27,13 +27,13 @@ Add the following line:
 
 #### 2. Add superuser privileges
 
-If our user (we'll call it _user_) does not come with predefined admin or superuser privileges, we can fix it by editing:
+If our user (we'll call it _[user]_) does not come with predefined admin or superuser privileges, we can fix it by editing:
 
     nano /etc/sudoers
 
 Scroll down to where users and permissions are listed, and add our user:
 
-    user ALL=(ALL:ALL) ALL
+    [user] ALL=(ALL:ALL) ALL
 
 Finally, update the system:
 
@@ -61,7 +61,7 @@ First, install the NVIDIA detection tool and run it:
 
 It will recommend the proper driver to install:
 
-    sudo apt install -y driver
+    sudo apt install -y [driver]
 
 Alternatively, install all NVIDIA drivers:
 
@@ -111,15 +111,15 @@ Here are the processes included in the essential setup:
 
 - **System update and enabling backports**
 
-Improves compatibility and updates the system to the latest available version.
+Improves compatibility and updates the system to the latest available version with backports.
 
 - **Installation of essential tools**
 
-Installs CLI utilities for networking, editors (vim), monitoring (htop, btop), download tools (curl, wget), certificates, and more.
+Installs CLI utilities for networking, editors (vim, nano), monitoring (neofetch, htop, btop, inxi), download and control tools (curl, wget, git, gpg), certificates and software common properties.
 
 - **Package managers and decompression tools**
 
-Installs drivers for file systems and compression formats (exFAT, NTFS, zip, rar, 7z), as well as package managers (Synaptic, Gdebi, Flatpak).
+Installs drivers for file systems and compression formats (exFAT, HFS, NTFS, ZIP, RAR, 7ZIP), as well as package managers (Synaptic, Gdebi, Flatpak).
 
 - **Installation of CPU microcodes**
 
@@ -127,19 +127,19 @@ Analyzes the CPU and installs the appropriate microcodes for Intel or AMD based 
 
 - **Development and network tools**
 
-Installs useful tools for development and network management (build-essential, gcc, clang, python3, net-tools, traceroute, nmap, etc.).
+Installs useful tools for development (build-essential, gcc, g++, make, cmake, pkg-cofig, gdb, clang, python3) and network management (net-tools, iproute2, traceroute, tcpdump, whois, nmap).
 
 - **Multimedia support and codecs**
 
-Installs major codec packages for multimedia support (ffmpeg, GStreamer, etc.).
+Installs major codec packages for multimedia support (ffmpeg, gstreamer, libavcodec).
 
-- **Fonts, printers, firewall and VPN**
+- **Fonts, printers, firewall, VPN and useful programs**
 
-Installs useful fonts like Microsoft and Ubuntu fonts, as well as printer drivers, a firewall (Gufw), and a VPN (Riseup VPN).
+Installs text fonts (Microsoft, Ubuntu, free fonts), as well as printer drivers, a firewall (Gufw), a VPN (Riseup VPN), and finally useful programs (Kitty, Firefox, Chromium, GIMP, VLC, Wireshark).
 
 - **GNOME customization**
 
-Installs tools to personalize the GNOME environment (gnome-tweaks, extensions, dconf-editor).
+Installs tools to personalize the GNOME environment (gnome-tweaks, extensions tools, dconf-editor).
 
 - **Final system cleanup**
 
@@ -159,18 +159,23 @@ It also installs some GNOME extensions for a more modern look.
 
 Changes are attempted to be applied through _gsettings_, and if this isn't possible, you'll need to do it manually using the GNOME Tweaks GUI.
 
-It's also recommended to enable the minimize and maximize buttons in the top bar of application windows. To do this, launch GNOME Tweaks and enable the "Minimize" and "Maximize" options in the Top Bar section.
+The maximize, minimize, and close buttons are also enabled in the top bar of application windows.
 
 The extensions are as follows:
 
 - Dash to dock
-- Pannel corners
-- ...
+- Desktop Icons NG (DING)
+- Vitals
+- Open Bar
+- Logo Menu
+- Top Hat
+- Panel Corners
+- Blur My Shell
 
 
 ## 🎵 Details of vscode.sh and spotify.sh
 
-Thanks to these two scripts, we can install _VS Code_ and _Spotify_ from their official repositories.
+Thanks to these two scripts, we can install VS Code and Spotify from their official repositories.
 
 It is very important to visit their official websites to keep the public keys updated before installation.
 
