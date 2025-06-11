@@ -111,7 +111,7 @@ sudo apt install -y \
 
 print "\n[+] Installing useful programs..."
 sudo apt install -y \
-  kitty firefox chromium gimp vlc wireshark
+  kitty firefox chromium gimp vlc audacity wireshark
 
 # ----------------------------------------------------------------
 # 8. GNOME configuration
