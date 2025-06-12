@@ -2,9 +2,9 @@
 
 source "./utils/colors.sh"
 
-print "==========================================================="
-print "              Visual Studio Code Installation              "
-print "==========================================================="
+title "==========================================================="
+title "              Visual Studio Code Installation              "
+title "==========================================================="
 
 # Confirm installation
 print "\n[+] This script is going to install Visual Studio Code on your system."

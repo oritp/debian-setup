@@ -2,11 +2,11 @@
 
 source "./utils/colors.sh"
 
-print "############################################################"
-print "#                                                          #"
-print "#                Debian 12 GNU/Linux Setup                 #"
-print "#                                                          #"
-print "############################################################"
+title "############################################################"
+title "#                                                          #"
+title "#                Debian 12 GNU/Linux Setup                 #"
+title "#                                                          #"
+title "############################################################"
 
 # Enabling execution permissions
 chmod +x ./install/essentials.sh

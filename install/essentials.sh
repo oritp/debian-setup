@@ -2,9 +2,9 @@
 
 source "./utils/colors.sh"
 
-print "==========================================================="
-print "             Debian 12 Essential Configuration             "
-print "==========================================================="
+title "==========================================================="
+title "             Debian 12 Essential Configuration             "
+title "==========================================================="
 
 # Confirm installation
 print "\n[+] This script is going to run several processes in your system."
