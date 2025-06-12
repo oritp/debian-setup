@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source "./utils/colors.sh"
+
 sudo apt update
 
 print "\nInstalling Arc theme..."
