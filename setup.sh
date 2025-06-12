@@ -24,7 +24,7 @@ print "    4. Appearance configuration"
 print "    5. VS Code"
 print "    6. Spotify"
 
-read -p "$(print "[+] Choose an option [1-5]: ")" option
+read -p "$(print "[+] Choose an option [1-6]: ")" option
 print ""
 
 case $option in
