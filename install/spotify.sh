@@ -4,7 +4,7 @@ source "./utils/colors.sh"
 
 title "============================================================"
 title "                    Spotify Installation                    "
-title "============================================================"
+title "============================================================\n"
 
 # Confirm installation
 print "\n[+] This script is going to install Spotify on your system."

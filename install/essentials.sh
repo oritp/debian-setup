@@ -4,7 +4,7 @@ source "./utils/colors.sh"
 
 title "==========================================================="
 title "             Debian 12 Essential Configuration             "
-title "==========================================================="
+title "===========================================================\n"
 
 # Confirm installation
 print "\n[+] This script is going to run several processes in your system."
@@ -75,7 +75,7 @@ sudo apt install -y \
   build-essential \
   gcc g++ make cmake \
   pkg-config gdb clang \
-  python3 python3-pip python3-venv
+  python3 python3-pip python3-venv python3-full
   
 print "\n[+] Installing networking tools..."
 sudo apt install -y \
@@ -118,11 +118,13 @@ sudo apt install -y \
 # ----------------------------------------------------------------
 print "\n[+] Installing GNOME configuration tools..."
 sudo apt install -y \
-  gnome-tweaks \
-  gnome-shell-extensions \
+  gnome-tweaks gnome-shell \
   chrome-gnome-shell \
-  gnome-shell-extension-prefs \
-  dconf-editor
+  gnome-shell-extensions \
+  gnome-shell-extension-prefs\
+  dconf-editor \
+  autoconf automake libgtk-3-dev \
+  gnome-themes-extra gtk2-engines-murrine
 
 # ----------------------------------------------------------------
 # 9. Final cleaning
