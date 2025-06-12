@@ -75,7 +75,7 @@ sudo apt install -y \
   build-essential \
   gcc g++ make cmake \
   pkg-config gdb clang \
-  python3 python3-pip python3-venv python3-full
+  python3 python3-pip python3-venv
   
 print "\n[+] Installing networking tools..."
 sudo apt install -y \
@@ -124,7 +124,7 @@ sudo apt install -y \
   gnome-shell-extension-prefs\
   dconf-editor \
   autoconf automake libgtk-3-dev \
-  gnome-themes-extra gtk2-engines-murrine
+  gnome-themes-extra gtk2-engines-murrine sassc
 
 # ----------------------------------------------------------------
 # 9. Final cleaning

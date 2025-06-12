@@ -11,12 +11,10 @@ sudo apt update
 #sudo rm -rf /usr/share/themes/Flat-Remix-*
 #print "\n[+] Installing Arc theme..."
 #sudo apt install -y arc-theme
-print "\n[+] Installing Flat-Remix theme..."
-git clone https://github.com/daniruiz/flat-remix-gnome.git
-sudo mkdir -p /usr/share/themes
-cd flat-remix-gnome/themes
-sudo mv Flat-Remix-* /usr/share/themes/
-
+print "\n[+] Installing Graphite GTK theme..."
+sudo git clone https://github.com/vinceliuice/Graphite-gtk-theme.git
+cd Graphite-gtk-theme
+sudo bash install.sh
 
 print "\n[+] Installing Newaita icons..."
 #git clone https://github.com/cbrnix/Newaita.git
@@ -49,17 +47,23 @@ print "\n[+] Enabling extensions..."
 #for UUID in "${EXTENSIONS[@]}"; do
 #    gnome-extensions enable "$UUID" || error "[!] The extension $UUID cannot be installed."
 #done
+gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
+gnome-extensions enable places-menu@gnome-shell-extensions.gcampax.github.com
+gnome-extensions enable applications-menu@gnome-shell-extensions.gcampax.github.com
 
-print "\n[+]Applying the new appearance..."
+
+
+
+print "\n[+] Applying the new appearance..."
 if command -v gsettings &> /dev/null; then
     print "[+] Enabling new theme..."
-    gsettings set org.gnome.desktop.interface gtk-theme "Flat-Remix"
-    gsettings set org.gnome.desktop.wm.preferences theme "Flat-Remix"
+    #gsettings set org.gnome.desktop.interface gtk-theme "Flat-Remix"
+    #gsettings set org.gnome.desktop.wm.preferences theme "Flat-Remix"
     print "[+] Enabling new icons..."
     gsettings set org.gnome.desktop.interface icon-theme "Newaita"
     print "[+] Enabling maximize, minimize and close windows buttons..."
     gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
-    print "[+] Settings applied. Please log in again if you don't see the changes."
+    print "[+] Settings applied."
 else
     error "[!] No gsettings detected. Apply themes manually from GNOME Tweaks."
 fi
