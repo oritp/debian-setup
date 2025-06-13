@@ -4,7 +4,7 @@ source "./utils/colors.sh"
 
 title "==========================================================="
 title "              Visual Studio Code Installation              "
-title "===========================================================\n"
+title "==========================================================="
 
 # Confirm installation
 print "\n[+] This script is going to install Visual Studio Code on your system."

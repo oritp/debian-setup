@@ -4,69 +4,74 @@ source "./utils/colors.sh"
 
 title "============================================================"
 title "                  Appearance Configuration                  "
-title "============================================================\n"
+title "============================================================"
+
+# Confirm installation
+print "\n[+] This script is going to configure a new appearance on your system."
+read -p "$(print "[+] Are you ready to proceed? (y/n) ")" answer
+
+if [[ "$answer" != "y" && "$answer" != "Y" ]]; then
+    error "[!] The configuration has been stopped. Bye! \n"
+    exit 0
+fi
+
+print "\n[+] Starting the system customization...\n"
 
 sudo apt update
 
-#sudo rm -rf /usr/share/themes/Flat-Remix-*
-#print "\n[+] Installing Arc theme..."
-#sudo apt install -y arc-theme
-print "\n[+] Installing Graphite GTK theme..."
-sudo git clone https://github.com/vinceliuice/Graphite-gtk-theme.git
-cd Graphite-gtk-theme
-sudo bash install.sh
+# Install the new theme
+print "\n[+] Installing 'Yaru' theme..."
+# sudo apt install yaru -y
 
-print "\n[+] Installing Newaita icons..."
+# Uninstall a theme from the system
+# sudo rm -rf /usr/share/themes/{[theme1], [theme2], ...}
+
+# Install the new icons
+print "\n[+] Installing 'Newaita' icons..."
 #git clone https://github.com/cbrnix/Newaita.git
 #cd Newaita
 #sudo mv Newaita/ /usr/share/icons/
 #sudo mv Newaita-dark/ /usr/share/icons/
 
+# Instal GNOME shell extension installer
 print "\n[+] Installing gnome-shell-extension-installer..."
 sudo curl -o /usr/local/bin/gnome-shell-extension-installer \
      https://raw.githubusercontent.com/brunelli/gnome-shell-extension-installer/master/gnome-shell-extension-installer
 sudo chmod +x /usr/local/bin/gnome-shell-extension-installer
 
+# Extensions declaration
 declare -A EXTENSIONS=(
-    [84]="dash-to-dock@micxgx.gmail.com"    # Dash to Dock
-    [63]="ding@rastersoft.com"              # Desktop Icons NG (DING)
-    [61]="Vitals@CoreCoding.com"            # Vitals
-    [24]="LogoMenu@aryan_k"                 # Logo Menu
-    [11]="tophat@fflewddur"                 # Top Hat
-    [7]="panel-corners@steve_Braun.net"     # Panel Corners
-    [47]="blur-my-shell@aunetx"             # Blur My Shell
-    [52]="removable-drive-menu@gnome-shell-extensions.gcampax.github.com"              # Removable Drive Menu
+    [307]="dash-to-dock@micxgx.gmail.com"    # Dash to Dock
+    [2087]="ding@rastersoft.com"             # Desktop Icons NG (DING)
+    [1460]="Vitals@CoreCoding.com"           # Vitals
+    [4451]="logomenu@aryan_k"                # Logo Menu
+    [3193]="blur-my-shell@aunetx"            # Blur My Shell
+    [6]="apps-menu@gnome-shell-extensions.gcampax.github.com"      # Applications Menu
+    [7]="drive-menu@gnome-shell-extensions.gcampax.github.com"     # Removable Drive Menu
+    [8]="places-menu@gnome-shell-extensions.gcampax.github.com"    # Places Status Indicator
+    [19]="user-theme@gnome-shell-extensions.gcampax.github.com"    # User Themes
 )
 
+# Install extensions
 print "\n[+] Installing extensions..."
-#for ID in "${!EXTENSIONS[@]}"; do
-#    gnome-shell-extension-installer "$ID" --yes || error "[!] Something goes wrong while installing the extension $ID"
-#done
+for ID in "${!EXTENSIONS[@]}"; do
+    print "[+] Installing extension $ID..."
+    gnome-shell-extension-installer "$ID" --yes || error "[!] Something goes wrong while installing the extension $ID."
+done
 
-print "\n[+] Enabling extensions..."
-#for UUID in "${EXTENSIONS[@]}"; do
-#    gnome-extensions enable "$UUID" || error "[!] The extension $UUID cannot be installed."
-#done
-gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
-gnome-extensions enable places-menu@gnome-shell-extensions.gcampax.github.com
-gnome-extensions enable applications-menu@gnome-shell-extensions.gcampax.github.com
-
-
-
-
+# Enable the full appearance
 print "\n[+] Applying the new appearance..."
 if command -v gsettings &> /dev/null; then
-    print "[+] Enabling new theme..."
     #gsettings set org.gnome.desktop.interface gtk-theme "Flat-Remix"
     #gsettings set org.gnome.desktop.wm.preferences theme "Flat-Remix"
-    print "[+] Enabling new icons..."
+    print "[+] New theme enabled."
     gsettings set org.gnome.desktop.interface icon-theme "Newaita"
-    print "[+] Enabling maximize, minimize and close windows buttons..."
+    print "[+] New icons enabled."
     gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
-    print "[+] Settings applied."
+    print "[+] Maximize, minimize and close windows buttons enabled."
 else
-    error "[!] No gsettings detected. Apply themes manually from GNOME Tweaks."
+    error "[!] No gsettings detected. Apply the new appearance manually from GNOME Tweaks."
 fi
 
 print "\n[+] Everything installed and configured!"
-print "[+] Reboot GNOME Shell (Alt+F2, write 'r' and then press Enter) or log in again to apply the changes."
+print "[+] Reboot GNOME Shell (Alt+F2, write 'r', press Enter) or log in again to apply the changes.\n"

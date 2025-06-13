@@ -4,7 +4,7 @@ source "./utils/colors.sh"
 
 title "==========================================================="
 title "             Debian 12 Essential Configuration             "
-title "===========================================================\n"
+title "==========================================================="
 
 # Confirm installation
 print "\n[+] This script is going to run several processes in your system."
@@ -15,7 +15,7 @@ if [[ "$answer" != "y" && "$answer" != "Y" ]]; then
     exit 0
 fi
 
-print "\n[+] Starting Debian 12 essential configuration...\n"
+print "\n[+] Starting Debian 12 essential configuration..."
 
 # ----------------------------------------------------------------
 # 1. Update system and enable backports
