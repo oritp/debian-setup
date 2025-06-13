@@ -28,12 +28,12 @@ print "\n[+] Installing 'Yaru' theme..."
 
 # Install the new icons
 print "\n[+] Installing 'Newaita' icons..."
-#git clone https://github.com/cbrnix/Newaita.git
-#cd Newaita
-#sudo mv Newaita/ /usr/share/icons/
-#sudo mv Newaita-dark/ /usr/share/icons/
+git clone https://github.com/cbrnix/Newaita.git
+cd Newaita
+sudo mv Newaita/ /usr/share/icons/
+sudo mv Newaita-dark/ /usr/share/icons/
 
-# Instal GNOME shell extension installer
+# Install GNOME shell extension installer
 print "\n[+] Installing gnome-shell-extension-installer..."
 sudo curl -o /usr/local/bin/gnome-shell-extension-installer \
      https://raw.githubusercontent.com/brunelli/gnome-shell-extension-installer/master/gnome-shell-extension-installer

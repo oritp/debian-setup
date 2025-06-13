@@ -10,8 +10,8 @@ title "############################################################"
 
 # Enabling execution permissions
 chmod +x ./install/essentials.sh
-chmod +x ./terminal/terminal.sh
 chmod +x ./install/appearance.sh
+chmod +x ./terminal/terminal.sh
 chmod +x ./install/vscode.sh
 chmod +x ./install/spotify.sh
 
@@ -19,8 +19,8 @@ print "\n[+] Welcome to Debian 12 Setup Menu!"
 print "[+] What do you want to install?"
 print "    1. Everything"
 print "    2. Essential configuration"
-print "    3. Terminal configuration"
-print "    4. Appearance configuration"
+print "    3. Appearance configuration"
+print "    4. Terminal configuration"
 print "    5. VS Code"
 print "    6. Spotify"
 
@@ -34,8 +34,8 @@ case $option in
        bash install/vscode.sh
        bash install/spotify.sh ;;
     2) bash install/essentials.sh ;;
-    3) bash terminal/terminal.sh ;;
-    4) bash install/appearance.sh ;;
+    3) bash install/appearance.sh ;;
+    4) bash terminal/terminal.sh ;;
     5) bash install/vscode.sh ;;
     6) bash install/spotify.sh ;;
     *) error "[!] Invalid option. Bye! \n"
