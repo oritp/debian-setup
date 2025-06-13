@@ -20,8 +20,8 @@ print "\n[+] Starting the system customization...\n"
 sudo apt update
 
 # Install the new theme
-print "\n[+] Installing 'Yaru' theme..."
-# sudo apt install yaru -y
+print "\n[+] Installing 'Arc' theme..."
+sudo apt install arc -y
 
 # Uninstall a theme from the system
 # sudo rm -rf /usr/share/themes/{[theme1], [theme2], ...}
@@ -62,8 +62,8 @@ done
 # Enable the full appearance
 print "\n[+] Applying the new appearance..."
 if command -v gsettings &> /dev/null; then
-    #gsettings set org.gnome.desktop.interface gtk-theme "Flat-Remix"
-    #gsettings set org.gnome.desktop.wm.preferences theme "Flat-Remix"
+    gsettings set org.gnome.desktop.interface gtk-theme "Arc-Darker"
+    gsettings set org.gnome.desktop.wm.preferences theme "Arc-Darker"
     print "[+] New theme enabled."
     gsettings set org.gnome.desktop.interface icon-theme "Newaita"
     print "[+] New icons enabled."
