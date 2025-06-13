@@ -148,15 +148,17 @@ At the end, the script frees up space and recommends a system reboot to apply al
 
 ## 🖥️ Details of terminal.sh
 
-This script configures the GNOME terminal emulator to create a more modern and attractive terminal, always running in bash.
+This script configures the GNOME terminal emulator to create a more modern and attractive terminal that looks good with the new system appearance.
 
-For those who prefer to use Kitty, it can also be configured using the `kitty.conf` file located in the same directory.
+For those who prefer to use Kitty terminal, it can also be configured by using the `kitty.conf` file located in the same directory.
+
+Personally, I like a simple appearance and interface, with minimal clutter and a bit of transparency. Feel free to modify this script as you wish to suit your preferences.
 
 ## 🎨 Details of appearance.sh
 
-This script installs and enables the GNOME Arc theme and Newaita icons.
+This script installs and enables a new look thanks to the GNOME Arc theme and Newaita icons.
 
-It also installs some GNOME extensions for a more modern look.
+It also installs some GNOME extensions and enables some pre-installed extensions for a more modern look.
 
 Changes are attempted to be applied through _gsettings_, and if this isn't possible, you'll need to do it manually using the GNOME Tweaks GUI.
 
@@ -164,15 +166,16 @@ The maximize, minimize, and close buttons are also enabled in the top bar of app
 
 The extensions are as follows:
 
+- Applications Menu (pre-intstalled)
+- Places Status Indicator (pre-installed)
+- User themes (pre-installed)
 - Dash to dock
 - Desktop Icons NG (DING)
-- Vitals
-- Open Bar
+- Blur My Shell
 - Logo Menu
+- Vitals
 - Top Hat
 - Panel Corners
-- Blur My Shell
-
 
 ## 🎵 Details of vscode.sh and spotify.sh
 
