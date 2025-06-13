@@ -96,11 +96,11 @@ Proceed to install the Debian 12 GNU/Linux setup program.
 When executing the script, an interactive menu will appear with the following options:
 
 - Install everything
--  Install only essential configuration
--  Install only terminal configuration
--  Install only appearance configuration
--  Install only VS Code
--  Install only Spotify
+- Install only essential configuration
+- Install only appearance configuration
+- Install only terminal configuration
+- Install only VS Code
+- Install only Spotify
 
 
 ## 📊 Details of essentials.sh
@@ -146,14 +146,6 @@ Installs tools to personalize the GNOME environment (gnome-tweaks, extensions to
 At the end, the script frees up space and recommends a system reboot to apply all changes properly.
 
 
-## 🖥️ Details of terminal.sh
-
-This script configures the GNOME terminal emulator to create a more modern and attractive terminal that looks good with the new system appearance.
-
-For those who prefer to use Kitty terminal, it can also be configured by using the `kitty.conf` file located in the same directory.
-
-Personally, I like a simple appearance and interface, with minimal clutter and a bit of transparency. Feel free to modify this script as you wish to suit your preferences.
-
 ## 🎨 Details of appearance.sh
 
 This script installs and enables a new look thanks to the GNOME Arc theme and Newaita icons.
@@ -171,15 +163,25 @@ The extensions are as follows:
 - User themes (pre-installed)
 - Dash to dock
 - Desktop Icons NG (DING)
-- Blur My Shell
-- Logo Menu
 - Vitals
-- Top Hat
-- Panel Corners
+- Logo Menu
+- Blur My Shell
+
+In order to apply the changes you will have to reboot GNOME Shell with `Alt+F2`, write `r`and press `Enter`, or log in again.
+
+
+## 🖥️ Details of terminal.sh
+
+This script configures the GNOME terminal emulator to create a more modern and attractive terminal that looks good with the new system appearance.
+
+For those who prefer to use Kitty terminal, it can also be configured by using the `kitty.conf` file located in the same directory.
+
+Personally, I like a simple appearance and interface, with minimal clutter and a bit of transparency. Feel free to modify this script as you wish to suit your preferences.
+
 
 ## 🎵 Details of vscode.sh and spotify.sh
 
-Thanks to these two scripts, we can install VS Code and Spotify from their official repositories.
+Thanks to these two scripts, we can install VS Code and Spotify applications from their official repositories.
 
 It is very important to visit their official websites to keep the public keys updated before installation.
 
