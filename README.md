@@ -167,7 +167,7 @@ The extensions are as follows:
 - Logo Menu
 - Blur My Shell
 
-In order to apply the changes you will have to reboot GNOME Shell with `Alt+F2`, write `r`and press `Enter`, or log in again.
+In order to apply the changes you will have to reboot GNOME Shell with `Alt+F2`, write `r` and press `Enter`, or log in again.
 
 
 ## 🖥️ Details of terminal.sh
