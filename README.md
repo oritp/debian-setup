@@ -103,7 +103,7 @@ When executing the script, an interactive menu will appear with the following op
 - Install only Spotify
 
 
-## 📊 Details of essentials.sh
+## 📊 Details of `essentials.sh`
 
 This script automates the installation of a base setup ideal for desktop and development environments. With this setup, the system is ready to be fully used.
 
@@ -146,7 +146,7 @@ Installs tools to personalize the GNOME environment (gnome-tweaks, extensions to
 At the end, the script frees up space and recommends a system reboot to apply all changes properly.
 
 
-## 🎨 Details of appearance.sh
+## 🎨 Details of `appearance.sh`
 
 This script installs and enables a new look thanks to the GNOME Arc theme and Newaita icons.
 
@@ -170,7 +170,7 @@ The extensions are as follows:
 In order to apply the changes you will have to reboot GNOME Shell with `Alt+F2`, write `r` and press `Enter`, or log in again.
 
 
-## 🖥️ Details of terminal.sh
+## 🖥️ Details of `terminal.sh`
 
 This script configures the GNOME terminal emulator to create a more modern and attractive terminal that looks good with the new system appearance.
 
@@ -179,7 +179,7 @@ For those who prefer to use Kitty terminal, it can also be configured by using t
 Personally, I like a simple appearance and interface, with minimal clutter and a bit of transparency. Feel free to modify this script as you wish to suit your preferences.
 
 
-## 🎵 Details of vscode.sh and spotify.sh
+## 🎵 Details of `vscode.sh` and `spotify.sh`
 
 Thanks to these two scripts, we can install VS Code and Spotify applications from their official repositories.
 
