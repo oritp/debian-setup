@@ -174,6 +174,8 @@ In order to apply the changes you will have to reboot GNOME Shell with `Alt+F2`,
 
 This script configures the GNOME terminal emulator to create a more modern and attractive terminal that looks good with the new system appearance.
 
+After finishing the installation of the new configuration, it is necessary to restart the terminal: `source ~/.bashrc`
+
 For those who prefer to use Kitty terminal, it can also be configured by using the `kitty.conf` file located in the same directory.
 
 Personally, I like a simple appearance and interface, with minimal clutter and a bit of transparency. Feel free to modify this script as you wish to suit your preferences.
