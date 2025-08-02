@@ -11,7 +11,8 @@ title "############################################################"
 # Enabling execution permissions
 chmod +x ./install/essentials.sh
 chmod +x ./install/appearance.sh
-chmod +x ./terminal/terminal.sh
+chmod +x ./terminal/gnome-terminal.sh
+chmod +x ./terminal/kitty-terminal.sh
 chmod +x ./install/vscode.sh
 chmod +x ./install/spotify.sh
 
@@ -29,13 +30,15 @@ print ""
 
 case $option in
     1) bash install/essentials.sh
-       bash terminal/terminal.sh
        bash install/appearance.sh
+       bash terminal/gnome-terminal.sh
+       bash terminal/kitty-terminal.sh
        bash install/vscode.sh
        bash install/spotify.sh ;;
     2) bash install/essentials.sh ;;
     3) bash install/appearance.sh ;;
-    4) bash terminal/terminal.sh ;;
+    4) bash terminal/gnome-terminal.sh 
+       bash terminal/kitty-terminal.sh ;;
     5) bash install/vscode.sh ;;
     6) bash install/spotify.sh ;;
     *) error "[!] Invalid option. Bye! \n"
