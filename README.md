@@ -1,7 +1,7 @@
 ![Debian 12](https://img.shields.io/badge/Platform-Debian%2012-blue?logo=debian)
 ![Shell](https://img.shields.io/badge/Language-Shell-orange?logo=gnubash)
 ![License](https://img.shields.io/badge/License-MIT%20License-lightgrey)
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+![Status](https://img.shields.io/badge/Status-Success-success)
 
 # Debian 12 GNU/Linux Setup
 
