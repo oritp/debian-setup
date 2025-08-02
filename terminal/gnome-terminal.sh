@@ -3,8 +3,8 @@
 source "./utils/colors.sh"
 
 # Colors
-ORANGE='#FAA24D'
-BLUE='#5C82FA'
+OR='#FAA24D'
+BL='#5C82FA'
 BG='#002b36'
 
 title "=========================================================="

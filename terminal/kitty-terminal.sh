@@ -2,14 +2,25 @@
 
 source "./utils/colors.sh"
 
+# Colors
+OR='#FAA24D'
+BL='#5C82FA'
+BG='#002b36'
+
 title "=========================================================="
-title "                GNOME Terminal Customization              "
+title "                Kitty Terminal Customization              "
 title "=========================================================="
 
-# Colors
-ORANGE="#FAA24D"
-BLUE="#5C82FA"
-BG="#619BC7"
+# Confirm installation
+print "\n[+] This script is going to configure the Kitty Terminal appearance."
+read -p "$(print "[+] Are you ready to proceed? (y/n) ")" answer
+
+if [[ "$answer" != "y" && "$answer" != "Y" ]]; then
+    error "[!] The installation has been stopped. Bye! \n"
+    exit 0
+fi
+
+print "\n[+] Starting Kitty Terminal configuration..."
 
 # Kitty configuration file route
 KITTY_CONF="${HOME}/.config/kitty/kitty.conf"
@@ -41,14 +52,14 @@ color14 #8abeb7
 color15 #ffffff
 
 # Transparency
-background_opacity 0.5
+background_opacity 0.7
 
 # Font
-font_family      FiraCode Nerd Font
+font_family      Monospace
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
-font_size        12.0
+font_size        11.0
 EOF
 
 print "kitty.conf file generated in: $KITTY_CONF"
@@ -56,12 +67,12 @@ print "kitty.conf file generated in: $KITTY_CONF"
 # Custom prompt for bash
 CUSTOM_PROMPT='export PS1="\[\e[1;38;5;208m\]\h\[\e[0m\]:\[\e[1;38;5;33m\]\w\[\e[0m\]\\$ "'
 
-# Add prompt in ~/.bashrc
+# Add to the end of ~/.bashrc
 if ! grep -Fxq "$CUSTOM_PROMPT" ~/.bashrc; then
-  print "\n# Custom Kitty Terminal prompt\n$CUSTOM_PROMPT" >> ~/.bashrc
+  echo -e "\n# Custom Kitty Terminal prompt\n$CUSTOM_PROMPT" >> ~/.bashrc
   print "Custom prompt added to ~/.bashrc"
 else
   print "The custom prompt is already in ~/.bashrc"
 fi
 
-echo "\nDone! Reboot Kitty Terminal to apply the new configuration."
+print "\nDone! Reboot Kitty Terminal to apply the new configuration. \n"
