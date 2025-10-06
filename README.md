@@ -27,7 +27,7 @@ Add the following line:
 
 #### 2. Add superuser privileges
 
-If our user (we'll call it _[user]_) does not come with predefined admin or superuser privileges, we can fix it by editing:
+If our user (we will call it _[user]_) does not come with predefined admin or superuser privileges, we can fix it by editing:
 
     nano /etc/sudoers
 
